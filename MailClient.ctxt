@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=server\ user
+comment0.target=MailClient(MailServer,\ java.lang.String)
+comment0.text=\r\n\ Constructor\ para\ la\ calse\ MailClient\r\n
+comment1.params=
+comment1.target=MailItem\ getNextMailItem()
+comment1.text=\r\n\ Metodo\ para\ recuperar\ del\ servidor\ un\ correo\ \r\n\ que\ tenga\ el\ usuario\ y\ devuelva\ dicho\ objeto\ \r\n
+comment2.params=
+comment2.target=void\ printNextMailItem()
+comment2.text=\r\n\ Metodo\ para\ recuperar\ del\ servidor\ un\ correo\r\n\ que\ tenga\ el\ usuario\ e\ imprima\ por\ pantalla\ \r\n\ los\ datos\ de\ dicho\ mensaje\r\n
+comment3.params=to\ message
+comment3.target=void\ sendMailItem(java.lang.String,\ java.lang.String)
+comment3.text=\r\n\ Metodo\ para\ crear\ un\ email\ y\ enviarlo\ al\ servidor\ asociado\ a\ ese\ cliente\r\n
+numComments=4
