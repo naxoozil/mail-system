@@ -1,17 +1,17 @@
 #BlueJ class context
-comment0.params=from1\ to1\ message1
+comment0.params=from\ to\ message
 comment0.target=MailItem(java.lang.String,\ java.lang.String,\ java.lang.String)
-comment0.text=\r\n\ Constructor\ para\ la\ clase\ MailItem\r\n\ \r\n
+comment0.text=\r\n\ Crea\ un\ objeto\ MailItem\ inicializando\ sus\ atributos\r\n\ a\ los\ valores\ dados\ como\ parametros\r\n
 comment1.params=
 comment1.target=java.lang.String\ getFrom()
-comment1.text=\r\n\ Metodo\ para\ saber\ el\ destinatario\r\n
+comment1.text=\r\n\ Devuelve\ la\ direccion\ el\ remitente\r\n
 comment2.params=
 comment2.target=java.lang.String\ getTo()
-comment2.text=\r\n\ Metodo\ para\ saber\ el\ receptor\r\n
+comment2.text=\r\n\ Devuelve\ la\ direcci\u00F3n\ del\ receptor\r\n
 comment3.params=
 comment3.target=java.lang.String\ getMessage()
-comment3.text=\r\n\ Metodo\ para\ saber\ el\ mensaje\r\n
+comment3.text=\r\n\ Devuelve\ el\ cuerpo\ del\ mensaje\r\n
 comment4.params=
 comment4.target=void\ print()
-comment4.text=\r\n\ Metodo\ para\ imprimir\ destinatario,\ receptor\ y\ mensaje\ \r\n
+comment4.text=\r\n\ Imprime\ por\ pantalla\ el\ remitente,\ el\ receptor\ y\ el\r\n\ cuerpo\ del\ email\r\n
 numComments=5

@@ -1,50 +1,59 @@
 
 public class MailClient
 {
-    private MailServer server;
-    //Es el servidor asociado con ese cliente
-    private String user;
-    //Representa la dirección de correo del usuario que usa ese cliente
-    /**
-     * Constructor para la calse MailClient
-     */
-    public MailClient(MailServer server, String user)
-    {
-        this.server = server;
-        this.user = user;
-    }
+	//El servidor al que esta conectado este cliente
+	private MailServer server;
+	//La direccion del usuario que esta usando este cliente
+	private String user;
 
-    /**
-     * Metodo para recuperar del servidor un correo 
-     * que tenga el usuario y devuelva dicho objeto 
-     */
-    public MailItem getNextMailItem()
-    {
-        return server.getNextMailItem(user);
-    }
-    
-    /**
-     * Metodo para recuperar del servidor un correo
-     * que tenga el usuario e imprima por pantalla 
-     * los datos de dicho mensaje
-     */
-    public void printNextMailItem()
-    {
-          MailItem item = server.getNextMailItem(user);
-        if(item == null) {
-            System.out.println("No new mail.");
-        }
-        else {
-            item.print();
-        }
-    }
-    
-    /**
-     * Metodo para crear un email y enviarlo al servidor asociado a ese cliente
-     */
-    public void sendMailItem(String to, String message)
-    {
-        MailItem item = new MailItem(user, to, message);
-        server.post(item);
-    }
+	/**
+	 * Crea un objeto MailClient a partir de los valores dados
+	 */
+	public MailClient(MailServer server, String user)
+	{
+		this.user = user;
+		this.server = server;
+	}
+
+	/**
+	 * Recupera del servidor el siguiente email destinado
+	 * al usuario que esta usando el cliente. Si no hay 
+	 * ningun email pendiente de ser descargado devuelve null;
+	 * si lo hay, devuelve el email
+	 */
+	public MailItem getNextMailItem()
+	{
+		return server.getNextMailItem(user);
+	}
+	
+	/**
+	 * Recupera del servidor el siguiente email destinado al
+	 * usuario que esta usando el cliente e imprime sus datos
+	 * por pantalla. Si no hay ningun email imprime por pantalla
+	 * un mensaje advirtiendo de ello
+	 */
+	public void printNextMailItem()
+	{
+		MailItem email = getNextMailItem();
+		if (email != null)
+		{
+			//Imprimimos los detalles del email
+			email.print();
+		}
+		else 
+		{
+			//Avisamos de que no hay emails en el servidor
+			System.out.println("No hay correo nuevo");	
+		}
+	}
+
+	/**
+	 * Permite redactar un email indicando el destinatario y el
+	 * cuerpo del mensaje y enviarlo al servidor
+	 */
+	public void sendMailItem(String to, String message)
+	{
+		MailItem email = new MailItem(user, to, message);
+		server.post(email);
+	}
 }

@@ -1,14 +1,14 @@
 #BlueJ class context
 comment0.params=server\ user
 comment0.target=MailClient(MailServer,\ java.lang.String)
-comment0.text=\r\n\ Constructor\ para\ la\ calse\ MailClient\r\n
+comment0.text=\r\n\ Crea\ un\ objeto\ MailClient\ a\ partir\ de\ los\ valores\ dados\r\n
 comment1.params=
 comment1.target=MailItem\ getNextMailItem()
-comment1.text=\r\n\ Metodo\ para\ recuperar\ del\ servidor\ un\ correo\ \r\n\ que\ tenga\ el\ usuario\ y\ devuelva\ dicho\ objeto\ \r\n
+comment1.text=\r\n\ Recupera\ del\ servidor\ el\ siguiente\ email\ destinado\r\n\ al\ usuario\ que\ esta\ usando\ el\ cliente.\ Si\ no\ hay\ \r\n\ ningun\ email\ pendiente\ de\ ser\ descargado\ devuelve\ null;\r\n\ si\ lo\ hay,\ devuelve\ el\ email\r\n
 comment2.params=
 comment2.target=void\ printNextMailItem()
-comment2.text=\r\n\ Metodo\ para\ recuperar\ del\ servidor\ un\ correo\r\n\ que\ tenga\ el\ usuario\ e\ imprima\ por\ pantalla\ \r\n\ los\ datos\ de\ dicho\ mensaje\r\n
+comment2.text=\r\n\ Recupera\ del\ servidor\ el\ siguiente\ email\ destinado\ al\r\n\ usuario\ que\ esta\ usando\ el\ cliente\ e\ imprime\ sus\ datos\r\n\ por\ pantalla.\ Si\ no\ hay\ ningun\ email\ imprime\ por\ pantalla\r\n\ un\ mensaje\ advirtiendo\ de\ ello\r\n
 comment3.params=to\ message
 comment3.target=void\ sendMailItem(java.lang.String,\ java.lang.String)
-comment3.text=\r\n\ Metodo\ para\ crear\ un\ email\ y\ enviarlo\ al\ servidor\ asociado\ a\ ese\ cliente\r\n
+comment3.text=\r\n\ Permite\ redactar\ un\ email\ indicando\ el\ destinatario\ y\ el\r\n\ cuerpo\ del\ mensaje\ y\ enviarlo\ al\ servidor\r\n
 numComments=4
