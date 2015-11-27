@@ -52,9 +52,14 @@ public class MailClient
 	 * Permite redactar un email indicando el destinatario y el
 	 * cuerpo del mensaje y enviarlo al servidor
 	 */
-	public void sendMailItem(String to, String subject, String message)
+	public void sendMailItem(String to, String message, String subject)
 	{
 		MailItem email = new MailItem(user, to, message, subject);
 		server.post(email);
+	}
+	
+	public void numberOfEmails()
+	{
+	    System.out.println("You have " + server.howManyMailItems(user) + "emails");
 	}
 }
