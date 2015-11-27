@@ -11,8 +11,9 @@ public class MailClient
 	 */
 	public MailClient(MailServer server, String user)
 	{
-		this.user = user;
+		this.server = new MailServer();
 		this.server = server;
+		this.user = user;
 	}
 
 	/**
@@ -51,9 +52,9 @@ public class MailClient
 	 * Permite redactar un email indicando el destinatario y el
 	 * cuerpo del mensaje y enviarlo al servidor
 	 */
-	public void sendMailItem(String to, String message)
+	public void sendMailItem(String to, String subject, String message)
 	{
-		MailItem email = new MailItem(user, to, message);
+		MailItem email = new MailItem(user, to, message, subject);
 		server.post(email);
 	}
 }
