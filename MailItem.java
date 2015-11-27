@@ -48,7 +48,7 @@ public class MailItem
 	/**
 	 * Devuelve el asunto del mensaje
 	 */
-	public String getsubject()
+	public String getSubject()
 	{
 	    return subject;
 	}

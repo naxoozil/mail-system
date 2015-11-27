@@ -62,4 +62,23 @@ public class MailClient
 	{
 	    System.out.println("You have " + server.howManyMailItems(user) + "emails");
 	}
+	
+	/**
+	 * Metodo para enviar automaticamente un correo cuando te llega un email
+	 * a su destinatario
+	 */
+	public void getNextMailItemAndSendAutomaticRespond()
+	{
+	    MailItem email = getNextMailItem();
+	    if (email != null){
+	        String to = email.getFrom();
+	        String email1 = "Ahora mismo no estoy en la oficina. /n" + email.getMessage();
+	        String subject = "RE"+ email.getSubject();
+	        MailItem email2 = new MailItem(user, to, email1, subject);
+	        server.post(email2);
+	    }
+	    else{
+	        System.out.println("No hay correo nuevo");	
+	    }
+	}
 }
